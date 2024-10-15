@@ -25,10 +25,10 @@ jobs:
 
     steps:
     - name: Checkout code
-      uses: actions/checkout@v2
+      uses: actions/checkout@v3
 
     - name: Set up Docker
-      uses: docker/setup-buildx-action@v1
+      uses: docker/setup-buildx-action@v2
 
     - name: Install Docker Compose
       run: |
@@ -36,9 +36,9 @@ jobs:
         sudo apt-get install -y docker-compose
 
     - name: Set up Node.js
-      uses: actions/setup-node@v2
+      uses: actions/setup-node@v3
       with:
-        node-version: '16'  # Укажите вашу версию Node.js
+        node-version: '20'  # Укажите вашу версию Node.js
 
     - name: Install dependencies
       run: npm install
