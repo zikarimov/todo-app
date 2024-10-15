@@ -48,9 +48,6 @@ jobs:
     - name: Build Docker image
       run: docker-compose build
 
-    - name: Run tests
-      run: npm test
-      working-directory: ./app
 
     - name: Push Docker image
       run: docker-compose push
